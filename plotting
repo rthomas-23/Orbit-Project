@@ -1,0 +1,67 @@
+#include <iostream> 
+
+#include <fstream> 
+
+#include <string> 
+
+#include <sstream> 
+
+  
+
+int main() { 
+
+    // Generate your data or read it from a file 
+
+    // Replace this with your actual data or file reading logic 
+
+    std::vector<double> x = {1.0, 2.0, 3.0, 4.0, 5.0}; 
+
+    std::vector<double> y = {2.0, 4.0, 6.0, 8.0, 10.0}; 
+
+     
+
+    // Open a pipe to Gnuplot 
+
+    FILE *gnuplotPipe = popen("gnuplot -persistent", "w"); 
+
+  
+
+    if (gnuplotPipe) { 
+
+        // Send commands to Gnuplot 
+
+        fprintf(gnuplotPipe, "set title 'Satellite Orbit'\n"); 
+
+        fprintf(gnuplotPipe, "set xlabel 'X Position'\n"); 
+
+        fprintf(gnuplotPipe, "set ylabel 'Y Position'\n"); 
+
+        fprintf(gnuplotPipe, "plot '-' with lines title 'Orbit'\n"); 
+
+  
+
+        // Send data to Gnuplot 
+
+        for (int i = 0; i < x.size(); i++) { 
+
+            fprintf(gnuplotPipe, "%lf %lf\n", x[i], y[i]); 
+
+        } 
+
+  
+
+        // Close the pipe 
+
+        fclose(gnuplotPipe); 
+
+    } else { 
+
+        std::cerr << "Could not open Gnuplot pipe." << std::endl; 
+
+    } 
+
+  
+
+    return 0; 
+
+} 
