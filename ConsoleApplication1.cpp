@@ -8,7 +8,7 @@
 
 int main()
 {
- Gnuplot gp;
+ Gnuplot gp("\"C:\\Program Files\\gnuplot\\bin\\gnuplot.exe\"");
  std::random_devicerd;
  std::mt19937 mt(rd());
  std::normal_distribution<double> normdist(0.,1.);
