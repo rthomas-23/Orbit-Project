@@ -5,6 +5,9 @@
 # Add source to this project's executable.
 add_executable (OrbitPlotting "OrbitPlotting.cpp" "OrbitPlotting.h" "Matrix.cpp" "Matrix.h")
 
+find_package(Pangolin CONFIG REQUIRED)
+target_link_libraries(OrbitPlotting PRIVATE ${Pangolin_LIBRARIES})
+
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET OrbitPlotting PROPERTY CXX_STANDARD 20)
 endif()
