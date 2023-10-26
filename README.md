@@ -14,3 +14,5 @@
    26  ./vcpkg.exe install pangolin
 
   Commands to run from GitBash
+
+  We used the library of Pangolin https://github.com/stevenlovegrove/Pangolin/tree/master
