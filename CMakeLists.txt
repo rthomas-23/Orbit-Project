@@ -3,7 +3,9 @@
 #
 
 # Add source to this project's executable.
-add_executable (OrbitPlotting "OrbitPlotting.cpp" "OrbitPlotting.h" "Matrix.cpp" "Matrix.h")
+#add_executable (OrbitPlotting "OrbitPlotting.cpp" "OrbitPlotting.h" "Matrix.cpp" "Matrix.h" "window.cpp")
+
+add_executable (OrbitPlotting "TestPlot.cpp")
 
 find_package(Pangolin CONFIG REQUIRED)
 target_link_libraries(OrbitPlotting PRIVATE ${Pangolin_LIBRARIES})
