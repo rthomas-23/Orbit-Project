@@ -16,3 +16,11 @@
   Commands to run from GitBash
 
   We used the library of Pangolin https://github.com/stevenlovegrove/Pangolin/tree/master
+
+
+cloning steps:
+ git clone https://github.com/rthomas-23/Orbit-Project
+ cd Orbit-Project/
+mkdir build && cd build
+cmake ..
+(then open solution inside orbit-project/build) go tfromthere
