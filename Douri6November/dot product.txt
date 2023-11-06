@@ -1,0 +1,15 @@
+#include "functions.h"
+#include <iostream>
+#include <iomanip>
+#include <math.h>
+#include <sstream>
+
+double dot_product ( std::vector<double> w, std::vector<double> x )
+{
+double z = 0;
+for ( uint8_t i = 0; i < x.size(); i++ )
+{
+z += w[i] * x[i];
+}
+return z;
+}
