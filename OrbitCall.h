@@ -10,6 +10,6 @@
 
 using namespace std;
 
-void DrawCircle(float cx, float cy, float r, int num_segments);
+void DrawCircle(vector<vector<double>> points);
 
 void plot(double x, double y, double z, int r, int g, int b);

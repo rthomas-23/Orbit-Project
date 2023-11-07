@@ -103,21 +103,21 @@ double EccAnomalyNR(double e, double x0, double n, int dt)
 }
 
 vector<double> add_vectors(vector<double> a, vector<double> b) {
-    // a and b must be the same size
-    vector<double> result(a.size()); // create a vector of the same size as the inputs
-    for (int i = 0; i < a.size(); i++) {
-   	 result[i] = (a[i] + b[i]);
-    }
-    return result;
+	// a and b must be the same size
+	vector<double> result(a.size()); // create a vector of the same size as the inputs
+	for (int i = 0; i < a.size(); i++) {
+		result[i] = (a[i] + b[i]);
+	}
+	return result;
 }
 
 vector<double> scale_vector(vector<double>a, double s) {
-    // s is a scale factor
-    vector<double> result(a.size()); // create a vector of the same size as the inputs
-    for (int i = 0; i < a.size(); i++) {
-   	 result[i] = a[i] * s;
-    }
-    return result;
+	// s is a scale factor
+	vector<double> result(a.size()); // create a vector of the same size as the inputs
+	for (int i = 0; i < a.size(); i++) {
+		result[i] = a[i] * s;
+	}
+	return result;
 }
 
 Matrix F_and_G(int Tp, int ti, double a, double e, vector<double> r0, vector<double> v0) {
@@ -168,6 +168,5 @@ Matrix F_and_G(int Tp, int ti, double a, double e, vector<double> r0, vector<dou
 		//cout << rs.dynamicMatrix[0][0] << endl;
 		i = i + 1;
 	}
-
 	return rs;
 }

@@ -3,7 +3,14 @@
 #
 
 # Add source to this project's executable.
-add_executable (OrbitPlotting  "Matrix.cpp" "Matrix.h" "MathTools.cpp" "MathTools.h" "test.cpp" "OEs.cpp" "OEs.h" "OrbitPlotting.cpp" "OrbitPlotting.h")
+
+set(CMAKE_BUILD_TYPE Debug)
+
+add_executable (OrbitPlotting "main.cpp" "main.h" "gnuplot-iostream.h" "Matrix.cpp" "Matrix.h" "MathTools.cpp" "MathTools.h" "OEs.cpp" "OEs.h" "OrbitCall.h" "OrbitCall.cpp")
+
+find_package(Pangolin CONFIG REQUIRED)
+find_package(zlib REQUIRED)
+target_link_libraries(OrbitPlotting PRIVATE ${Pangolin_LIBRARIES})
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET OrbitPlotting PROPERTY CXX_STANDARD 20)
