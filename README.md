@@ -1,5 +1,5 @@
 # Orbit-Project
-
+first do this
 
    21  git clone https://github.com/Microsoft/vcpkg.git
    
@@ -23,4 +23,5 @@ cloning steps:
  cd Orbit-Project/
 mkdir build && cd build
 cmake ..
+cmake --build .
 (then open solution inside orbit-project/build) go tfromthere
