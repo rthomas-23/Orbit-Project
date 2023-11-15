@@ -23,5 +23,6 @@ cloning steps:
  cd Orbit-Project/
 mkdir build && cd build
 cmake ..
-cmake --build .
+cmake -DCMAKE_BUILD_TYPE=Release ..
+cmake --build . --config Release
 (then open solution inside orbit-project/build) go tfromthere
