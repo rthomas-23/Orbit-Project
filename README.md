@@ -19,16 +19,16 @@ first do this
 
 
 cloning steps:
-git clone https://github.com/rthomas-23/Orbit-Project
+git clone https://github.com/rthomas-23/Orbit-Project <br />
 
-cd Orbit-Project/
+cd Orbit-Project/ <br />
  
-mkdir build && cd build
+mkdir build && cd build <br />
 
-cmake ..
+cmake .. <br />
 
-cmake -DCMAKE_BUILD_TYPE=Release ..
+cmake -DCMAKE_BUILD_TYPE=Release .. <br />
 
-cmake --build . --config Release
+cmake --build . --config Release <br />
 
 (then open solution inside orbit-project/build) go tfromthere
