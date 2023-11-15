@@ -25,9 +25,7 @@ cd Orbit-Project/ <br />
  
 mkdir build && cd build <br />
 
-cmake .. <br />
-
-cmake -DCMAKE_BUILD_TYPE=Release .. <br />
+cmake -DCMAKE_BUILD_TYPE=Release .. -DCMAKE_TOOLCHAIN_FILE=~/Downloads/vcpkg/scripts/buildsystems/vcpkg.cmake <br />
 
 cmake --build . --config Release <br />
 
