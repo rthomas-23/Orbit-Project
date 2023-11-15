@@ -32,3 +32,5 @@ cmake -DCMAKE_BUILD_TYPE=Release .. <br />
 cmake --build . --config Release <br />
 
 (then open solution inside orbit-project/build) go tfromthere
+
+if cmake .. cannot find the Pangolin library. Try the following command:
