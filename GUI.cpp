@@ -129,7 +129,7 @@ char enterData(char x, string cmd_rqst) {
 				// Ignore any remaining characters in the buffer
 				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			}
-			if (x != 'b' && x != 'r' && x != 'g' && x != 'y' && x != 'p' && x != 't' && x != 'w' && x != 'o')
+			if (x != 'b' && x != 'r' && x != 'g' && x != 'y' && x != 'p' && x != 't' && x != 'w')
 			{while (true) {
 					cout << "Entry Not-Applicable... End program? (y/n)" << endl;
 					cin >> yn;

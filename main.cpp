@@ -54,7 +54,7 @@ int main() { // NB: instead of plotting "n" orbits, initiate x objects (such as 
 		AOP = enterData(AOP, 'ang', AOP_cmd_rqst, 2 * pi);
 		string I_cmd_rqst = "\nInclination, I (rad) : \nMust be 0 <= I < pi\n";
 		I = enterData(I, 'ang', I_cmd_rqst,  pi);
-		string colour_cmd_rqst = "\nSet the colour. Choose from: \nblue (b), red (r), green (g), yellow (y), pink (p), turquoise (t), white (w), orange (o)\n";
+		string colour_cmd_rqst = "\nSet the colour. Choose from: \nblue (b), red (r), green (g), yellow (y), pink (p), turquoise (t), white (w)\n";
 		colour = enterData(colour, colour_cmd_rqst);
 
 		Matrixes[i].set_OEs(a, e, f, RAAN, AOP, I);

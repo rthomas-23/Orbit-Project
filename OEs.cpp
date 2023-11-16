@@ -34,7 +34,6 @@ void OEs::set_colour(char a) {
 	else if (a == 'p') { colourints[0] = 1; colourints[1] = 0; colourints[2] = 1; } // pink
 	else if (a == 't') { colourints[0] = 0; colourints[1] = 1; colourints[2] = 1; } // turquoise
 	else if (a == 'w') { colourints[0] = 1; colourints[1] = 1; colourints[2] = 1; } // white
-	else if (a == 'o') { colourints[0] = 1; colourints[1] = 0.5; colourints[2] = 0; } // orange
 }
 
 vector<double> OEs::return_OEs() {

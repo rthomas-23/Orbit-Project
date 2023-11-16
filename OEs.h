@@ -16,7 +16,7 @@ public:
 	double I;
 	static const int mu = 398600;
 	char colour;
-	int colourints[3] = { 1,1,1 };
+	double colourints[3] = { 1.0,1.0,1.0 };
 	void set_colour(char c);
 	std::vector<double> r0;
 	std::vector<double> v0;
