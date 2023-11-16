@@ -142,3 +142,31 @@ char enterData(char x, string cmd_rqst) {
 		}
 	return x;
 }
+int enterData(int x, string cmd_rqst, int max_orbits) {
+	char yn;
+	while (true) {
+		cout << cmd_rqst << endl;
+
+		while (!(std::cin >> x)) {
+			std::cout << "Invalid input. Please enter a valid int: ";
+
+			// Clear the input buffer
+			std::cin.clear();
+
+			// Ignore any remaining characters in the buffer
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		} // if (num_orbits > 5 || num_orbits < 1) 
+		if (x > max_orbits || x < 1 )
+		{
+			while (true) {
+				cout << "Entry Not-Applicable... End program? (y/n)" << endl;
+				cin >> yn;
+				if (yn == 'y') { yn = ' '; return 0; }
+				else if (yn == 'n') { yn = ' '; break; }
+				yn = ' ';
+			}
+		}
+		else { break; }
+	}
+	return x;
+}

@@ -33,11 +33,11 @@ int main() { // NB: instead of plotting "n" orbits, initiate x objects (such as 
 	Matrix Matrixes[max_objects] = { aa,bb,cc,dd,ee};
 
 	int num_orbits=0;
-	cout << "Hello There... How many orbits do you wish to plot? Choose between 1 - 5." << endl;
-	cin >> num_orbits;
-	if (num_orbits > 5 || num_orbits < 1) {cout << "Entry Not-Applicable... End of Program" << endl; return 0;}
+	string orb_cmd_rqst = "Hello There... How many orbits do you wish to plot? Choose between 1 - 5.";
+	num_orbits = enterData(num_orbits, orb_cmd_rqst, max_objects);
 	cout << "OK! " << num_orbits << " orbits it is!\n" << endl;
 	cout << "Let's specify each orbit: " << endl;
+
 	for (int i = 0; i < num_orbits; i++) {
 		double a = 0; double e = 0; double f=0; double RAAN=0; double AOP=0; double I=0; char colour='x';
 		cout << "\nOrbit: " << i+1 << "..." << endl;

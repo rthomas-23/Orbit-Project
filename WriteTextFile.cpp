@@ -18,7 +18,7 @@ void displayAndSaveOrbitalInformation(double semiMajorAxis, double eccentricity,
 	cout << "Inclination (rad): " << inclination << endl;
 	cout << "Right Ascension of Ascending Node (RAAN, rad): " << raan << endl;
 	cout << "Argument of Perigee (rad): " << aop << endl;
-	cout << "Period of Oscillation (s): " << period << endl;
+	cout << "Orbital Period (s): " << period << endl;
 	cout << "Radius of Orbit at Perigee (km): " << radiusOfOrbit << endl;
 
 	// Save to file
@@ -31,7 +31,7 @@ void displayAndSaveOrbitalInformation(double semiMajorAxis, double eccentricity,
 		outFile << "Inclination (rad): " << inclination << endl;
 		outFile << "Right Ascension of Ascending Node (RAAN, rad): " << raan << endl;
 		outFile << "Argument of Perigee (rad): " << aop << endl;
-		outFile << "Period of Oscillation (s): " << period << endl;
+		outFile << "Orbital Period (s): " << period << endl;
 		outFile << "Radius of Orbit at Perigee (km): " << radiusOfOrbit << endl;
 		// ... [rest of the outFile << statements, similar to cout statements above] ...
 		outFile.close();
