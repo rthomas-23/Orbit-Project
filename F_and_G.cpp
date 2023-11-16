@@ -17,7 +17,6 @@ Matrix F_and_G(int rows, int ti, double a, double e, vector<double> r0, vector<d
 
 	// initialising r and v arrays
 	Matrix rs; // position vectors
-	//int rows = 1 + ceil(Tp / ti);
 	int columns = 3;
 	rs.set_rows(rows);
 	rs.set_columns(columns);
