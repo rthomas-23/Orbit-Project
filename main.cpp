@@ -113,7 +113,7 @@ int main() { // NB: instead of plotting "n" orbits, initiate x objects (such as 
 			
 
 		for (int i = 0; i < num_orbits; i++) {
-			Matrixes[i].plotobject(ti);
+			Matrixes[i].plotobject();
 		}
 
 		// Swap frames and Process Events

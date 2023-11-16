@@ -97,7 +97,7 @@ int Matrix::return_Tp() {
 	return Tp;
 }
 
-void Matrix::plotobject(int ti) {
+void Matrix::plotobject() {
 	if (i < this->num_rows) {
 		double x = dynamicMatrix[i][0];
 		double y = dynamicMatrix[i][1];

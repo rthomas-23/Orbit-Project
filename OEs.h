@@ -46,7 +46,7 @@ public:
 	void calc_Tp();
 	int return_Tp();
 
-	void plotobject(int ti);
+	void plotobject();
 
 private:
 
