@@ -102,7 +102,6 @@ void Matrix::plotobject() {
 		double x = dynamicMatrix[i][0];
 		double y = dynamicMatrix[i][1];
 		double z = dynamicMatrix[i][2];
-		cout << x << y << z << endl;
 		plot(x, y, z, colourints[0], colourints[1], colourints[2]);
 		DrawCircle(dynamicMatrix);
 		i += 1;
