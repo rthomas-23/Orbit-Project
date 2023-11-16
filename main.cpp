@@ -61,8 +61,9 @@ int main() { // NB: instead of plotting "n" orbits, initiate x objects (such as 
 
 		// Write File
 		cout << "\nSummary...\n" << endl;
-		string fileName = "Orbit_" + to_string(i) + ".txt";
-		displayAndSaveOrbitalInformation(Matrixes[i].return_OEs()[0], Matrixes[i].return_OEs()[1], Matrixes[i].return_OEs()[2], Matrixes[i].return_OEs()[5], Matrixes[i].return_OEs()[3], Matrixes[i].return_OEs()[4], 398600, fileName);
+		string fileName = "Orbit_" + to_string(i+1) + ".txt";
+		displayAndSaveOrbitalInformation(Matrixes[i].return_OEs()[0], Matrixes[i].return_OEs()[1], Matrixes[i].return_OEs()[2], Matrixes[i].return_OEs()[5],
+			Matrixes[i].return_OEs()[3], Matrixes[i].return_OEs()[4], 398600, fileName);
 		cout << "--> File Written! <--" << endl;
 		cout << "---------------------------------------------------------------------------------------\n" << endl;
 
@@ -73,7 +74,7 @@ int main() { // NB: instead of plotting "n" orbits, initiate x objects (such as 
 		Matrixes[i].set_columns(3);
 		Matrixes[i].set_rows(rows);
 		Matrixes[i].resize_matrix();
-		Matrixes[i] = F_and_G(rows, ti, Matrixes[i].return_OEs()[0], Matrixes[i].return_OEs()[1], Matrixes[i].return_RV0()[0], Matrixes[i].return_RV0()[1]); // could have vector indexing issues here
+		Matrixes[i] = F_and_G(rows, ti, Matrixes[i].return_OEs()[0], Matrixes[i].return_OEs()[1], Matrixes[i].return_RV0()[0], Matrixes[i].return_RV0()[1]);
 		Matrixes[i].set_colour(colour);
 	}
 
