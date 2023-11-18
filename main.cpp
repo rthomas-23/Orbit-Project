@@ -110,9 +110,8 @@ int main() { // NB: instead of plotting "n" orbits, initiate x objects (such as 
 		quad = gluNewQuadric();
 		glTranslatef(0, 0, 0);
 		gluSphere(quad, 1, 20, 10); // loook up function definitions to set the size of the earth 
-			
 
-		for (int i = 0; i < num_orbits; i++) {
+		for (int i = 0; i < num_orbits; i++) { // plot each orbit position in the container Matrixes
 			Matrixes[i].plotobject();
 		}
 

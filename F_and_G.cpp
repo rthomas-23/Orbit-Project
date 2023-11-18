@@ -33,14 +33,13 @@ Matrix F_and_G(int rows, int ti, double a, double e, vector<double> r0, vector<d
 	double pi = 3.14159;
 	double x0 = pi;
 	double r0mag = magnitude(r0);
-	//while (dt < Tp)
 	int j = 0;
+
 	while (j<rows-1)
 	{
 		dt = dt0 + (i * ti); // increment by ti sec
-		double E = EccAnomalyNR(e, x0, n, dt);
+		double E = EccAnomalyNR(e, x0, n, dt); // Calculate eccentric anomaly at time t
 		double dE = E - E0;
-
 		double F = (1 - (a / r0mag) * (1 - cos(dE)));
 		double G = dt - (sqrt((a * a * a) / mu) * (dE - sin(dE)));
 		rs.dynamicMatrix[i] = add_vectors(scale_vector(r0, F), scale_vector(v0, G)); // [0]:rx, [1]:ry, [2]:rz

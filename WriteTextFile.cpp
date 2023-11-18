@@ -33,7 +33,6 @@ void displayAndSaveOrbitalInformation(double semiMajorAxis, double eccentricity,
 		outFile << "Argument of Perigee (rad): " << aop << endl;
 		outFile << "Orbital Period (s): " << period << endl;
 		outFile << "Radius of Orbit at Perigee (km): " << radiusOfOrbit << endl;
-		// ... [rest of the outFile << statements, similar to cout statements above] ...
 		outFile.close();
 	}
 	else {

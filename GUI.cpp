@@ -85,8 +85,6 @@ double enterData(double x, char param, string cmd_rqst, int min_val) {
 		}
 	}
 
-
-	// this is for angles:
 	else {
 		char yn;
 		while (true) {
@@ -115,6 +113,7 @@ double enterData(double x, char param, string cmd_rqst, int min_val) {
 	return x;
 }
 
+// for char values
 char enterData(char x, string cmd_rqst) {
 	char yn;
 	while (true) {
@@ -142,6 +141,8 @@ char enterData(char x, string cmd_rqst) {
 		}
 	return x;
 }
+
+// for int values
 int enterData(int x, string cmd_rqst, int max_orbits) {
 	char yn;
 	while (true) {

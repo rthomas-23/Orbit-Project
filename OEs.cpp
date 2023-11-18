@@ -51,13 +51,13 @@ void OEs::OE2RV0() {
 	r0 = this->r0;
 	v0 = this->v0;
 
-	double r_mag = a * (1 - e * e) / (1 + e * cos(f));
-	std::vector<double> rpf = { r_mag * cos(f), r_mag * sin(f), 0 };
+	double r_mag = a * (1 - e * e) / (1 + e * cos(f)); // position magnitude using trajectory equation
+	std::vector<double> rpf = { r_mag * cos(f), r_mag * sin(f), 0 }; // perifocal frame
 	std::vector<double> vpf = { (-mu * sin(f)) / (sqrt(mu * a * (1 - e * e))), (mu * (e + cos(f))) / (sqrt(mu * a * (1 - e * e))), 0 };	
 
 	vector<vector<double>> R = { {(cos(RAAN) * cos(AOP) - sin(RAAN) * sin(AOP) * cos(I)), (-cos(RAAN) * sin(AOP) - sin(RAAN) * cos(AOP) * cos(I)), (sin(RAAN) * sin(I))},
 					{(sin(RAAN) * cos(AOP) + cos(RAAN) * sin(AOP) * cos(I)), (-sin(RAAN) * sin(AOP) + cos(RAAN) * cos(AOP) * cos(I)),(cos(RAAN) * sin(I))},
-					{(sin(AOP) * sin(I)), (cos(AOP) * sin(I)), (cos(I))} }; // The transpose of R
+					{(sin(AOP) * sin(I)), (cos(AOP) * sin(I)), (cos(I))} }; // The transpose of R. this is the perifocal -> orbital frame DCM conversion
 
 	for (int i = 0; i < 3; i++) {
 		// compute R*rpf, R*vpf

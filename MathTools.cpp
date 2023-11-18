@@ -90,8 +90,8 @@ double EccAnomalyNR(double e, double x0, double n, int dt)
 	double tol = 0.00001;
 	double error = 99999;
 	double sol = 0;
-	while (magnitude(error) > tol) {
-		sol = x0 - ((x0 - e * sin(x0) - n * dt) / (1 - e * cos(x0)));
+	while (magnitude(error) > tol) { // iterate until the error converges
+		sol = x0 - ((x0 - e * sin(x0) - n * dt) / (1 - e * cos(x0))); // x0 - f(x)/f(x)'. this is the Newton Rhapson equation
 		error = sol - x0;
 		x0 = sol;
 	}
